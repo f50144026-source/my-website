@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef Naila</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #0a1a3f; /* Dark Blue */
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    nav {
+      text-align: center;
+      background: #222;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .menu-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .menu-section h2 {
+      font-size: 2em;
+      color: #0a1a3f;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #d4af37; /* gold underline */
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .menu-category {
+      margin: 30px auto;
+      max-width: 900px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .menu-category h3 {
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #000; /* Black text */
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .menu-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .menu-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .menu-item-content {
+      padding: 15px;
+      text-align: center;
+    }
+    .menu-item-content h4 {
+      margin: 10px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .price {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #000; /* Black price */
+      margin: 5px 0;
+    }
+    .order-btn {
+      background: #d4af37;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+    .order-btn:hover {
+      background: #b8942c;
+    }
+    footer {
+      background: #0a1a3f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chef Naila</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home" style="padding:40px 20px; text-align:center;">
+<img src="https://t4.ftcdn.net/jpg/03/14/36/33/360_F_314363347_jiMEfkFWHqJ9J5r3IjihtTlvyf7ECYpl.jpg" style="display: block; margin: 0 auto;">
+
+
+    <h2>Welcome to Chef Naila's Kitchen</h2>
+    <p>Delicious homemade desserts and fast food delivered fresh to your doorstep in Landhi & Korangi.</p>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <h2>Our Special Menu</h2>
+
+    <div class="menu-category">
+      <h3>Desserts</h3>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="https://i0.wp.com/binjalsvegkitchen.com/wp-content/uploads/2015/11/Red-Velvet-Cake-H2.jpg?ssl=1" alt="Chocolate Cake">
+          <div class="menu-item-content">
+            <h4>Chocolate Cake</h4>
+            <p class="price">Rs. 1200</p>
+            <button class="order-btn" onclick="orderNow('Chocolate Cake')">Order Now</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://img.huffingtonpost.com/asset/5665a368210000dd005ac709.png?cache=vTfdsFrVje" alt="Brownie">
+          <div class="menu-item-content">
+            <h4>Brownie</h4>
+            <p class="price">Rs. 300</p>
+            <button class="order-btn" onclick="orderNow('Brownie')">Order Now</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://images.pexels.com/photos/2525682/pexels-photo-2525682.png?cs=srgb&dl=pexels-eira-2525682.jpg&fm=jpg" alt="6 Cupcake">
+          <div class="menu-item-content">
+            <h4>Cupcake</h4>
+            <p class="price">Rs. 300</p>
+            <button class="order-btn" onclick="orderNow('Cupcake')">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-category">
+      <h3>Fast Food</h3>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="https://cdn.pixabay.com/photo/2022/07/15/18/12/cheese-burger-7323672_640.jpg" alt="Zinger Burger">
+          <div class="menu-item-content">
+            <h4>Zinger Burger</h4>
+            <p class="price">Rs. 450</p>
+            <button class="order-btn" onclick="orderNow('Zinger Burger')">Order Now</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbesGCVwaeJNTZUliLCogAwupvaElAna1hqw&s" alt="French Fries">
+          <div class="menu-item-content">
+            <h4>French Fries</h4>
+            <p class="price">Rs. 150</p>
+            <button class="order-btn" onclick="orderNow('French Fries')">Order Now</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://thumbs.dreamstime.com/b/pizza-slices-flying-black-background-delicious-peperoni-pieces-melting-cheese-ingredients-generated-ai-330564445.jpg" alt="Pizza Slice">
+          <div class="menu-item-content">
+            <h4>Pizza Slice</h4>
+            <p class="price">Rs. 250</p>
+            <button class="order-btn" onclick="orderNow('Pizza Slice')">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding:40px 20px; text-align:center;">
+    <h2>About Us</h2>
+    <p>Welcome to Chef Naila's kitchen! We serve the best desserts and fast food in Landhi & Korangi. Freshly prepared and delivered to your doorstep.</p>
+  </section>
+
+  <section id="contact" style="padding:40px 20px; text-align:center; background:#f1f1f1;">
+    <h2>Contact Us</h2>
+    <strong><p>📞 Phone: 03152575409</p><strong>
+    <strong><p>📸 Instagram: @chef_naila_kamran</p><strong>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Chef Naila. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function orderNow(item) {
+      let phone = "03152575409";
+      let url = `https://wa.me/92${phone.slice(1)}?text=I want to order: ${item}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
